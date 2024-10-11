@@ -1,8 +1,8 @@
 //
 //  ViewController.swift
-//  Dices
+//  DiceeApp
 //
-//  Created by user252323 on 10/10/24.
+//  Created by Student on 11.10.2024.
 //
 
 import UIKit
@@ -13,11 +13,12 @@ class ViewController: UIViewController {
     @IBOutlet var diceImage2: UIImageView!
     
     let diceImages = ["dice1", "dice2", "dice3", "dice4", "dice5", "dice6"]
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        diceImage1.image = UIImage(named: "dice1")
-        diceImage2.image = UIImage(named: "dice1")
+        // diceImage1 = UIImageView(image: UIImage(named: "dice4"))
+        diceImage1.image = UIImage(named: "dice4")
+        diceImage2.image = UIImage(named: "dice4")
     }
 
     @IBAction func rollDices(_ sender: UIButton) {

@@ -29,6 +29,9 @@
                                 <color key="tintColor" systemColor="labelColor"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Roll Dices"/>
+                                <connections>
+                                    <action selector="rollDices:" destination="BYZ-38-t0r" eventType="touchUpInside" id="m7i-y1-TkU"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -36,12 +39,16 @@
                         <constraints>
                             <constraint firstItem="qae-uq-5le" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="75" id="9zx-Q6-YYn"/>
                             <constraint firstItem="jRM-ni-TK1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="KDa-fW-d9r"/>
-                            <constraint firstItem="N9H-N7-avz" firstAttribute="leading" secondItem="qae-uq-5le" secondAttribute="trailing" constant="43" id="fog-32-NfJ"/>
+                            <constraint firstItem="N9H-N7-avz" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" constant="-75" id="fog-32-NfJ"/>
                             <constraint firstItem="qae-uq-5le" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="j5t-vs-gV8"/>
                             <constraint firstItem="jRM-ni-TK1" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" constant="-75" id="jfZ-1y-oYr"/>
                             <constraint firstItem="N9H-N7-avz" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="mf8-qm-rVz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="diceImage1" destination="qae-uq-5le" id="3AX-V8-tI2"/>
+                        <outlet property="diceImage2" destination="N9H-N7-avz" id="Emy-nf-vgj"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

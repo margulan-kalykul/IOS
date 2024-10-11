@@ -9,6 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
+    
     @IBOutlet var diceImage1: UIImageView!
     @IBOutlet var diceImage2: UIImageView!
     
@@ -19,13 +20,15 @@ class ViewController: UIViewController {
         diceImage1.image = UIImage(named: "dice1")
         diceImage2.image = UIImage(named: "dice1")
     }
-
+    
+    
     @IBAction func rollDices(_ sender: UIButton) {
         let num1 = Int.random(in: 0..<diceImages.count)
         let num2 = Int.random(in: 0..<diceImages.count)
-        
+                
         diceImage1.image = UIImage(named: diceImages[num1])
         diceImage2.image = UIImage(named: diceImages[num2])
     }
+    
 }
 

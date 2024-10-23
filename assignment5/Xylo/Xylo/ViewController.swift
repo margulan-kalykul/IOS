@@ -26,6 +26,7 @@ class ViewController: UIViewController {
         
     }
     
+    // function to play a note based on its name
     func playNote(note: String) {
         if let soundUrl = Bundle.main.url(forResource: note, withExtension: "wav") {
             do {
@@ -38,6 +39,7 @@ class ViewController: UIViewController {
         }
     }
     
+    // catch a Touch Up Inside event of any button
     @IBAction func buttonPressed(_ sender: UIButton?) {
         //sender?.backgroundColor(UIColor(named: "whitre"))
         // print("Button pressed")

@@ -37,6 +37,13 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6B3299332CC7FE0E007990FB /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Sounds;
+			sourceTree = "<group>";
+		};
 		6B52BA762CC7EA0D009DCD24 = {
 			isa = PBXGroup;
 			children = (
@@ -56,6 +63,7 @@
 		6B52BA812CC7EA0D009DCD24 /* Xylo */ = {
 			isa = PBXGroup;
 			children = (
+				6B3299332CC7FE0E007990FB /* Sounds */,
 				6B52BA822CC7EA0D009DCD24 /* AppDelegate.swift */,
 				6B52BA842CC7EA0D009DCD24 /* SceneDelegate.swift */,
 				6B52BA862CC7EA0D009DCD24 /* ViewController.swift */,

@@ -22,7 +22,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // print("Check")
+        print("Check")
         
     }
     
@@ -40,12 +40,12 @@ class ViewController: UIViewController {
     }
     
     // catch a Touch Up Inside event of any button
-    @IBAction func buttonPressed(_ sender: UIButton?) {
-        //sender?.backgroundColor(UIColor(named: "whitre"))
-        // print("Button pressed")
-        if let s = sender {
-            playNote(note: s.currentTitle ?? "A")
-        }
+    @IBAction func buttonPressed(_ sender: UIButton) {
+        // empty color variable
+        // var c: UIColor!
+        print("Button pressed")
+        playNote(note: sender.currentTitle ?? "A")
+        // sender.backgroundColor = UIColor.white
     }
 
 

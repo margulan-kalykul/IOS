@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="22505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="EggTimer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" ambiguous="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="cnK-pL-fuA">
+                                <rect key="frame" x="121" y="699" width="150" height="4"/>
+                            </progressView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WVN-gU-J3w">
+                                <rect key="frame" x="146.66666666666666" y="363.66666666666669" width="100" height="150.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="D0B-QN-qTY"/>
+                                    <constraint firstAttribute="width" constant="100" id="Esv-nU-kKt"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="medium_egg"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ej6-5W-70l">
+                                <rect key="frame" x="35" y="363.66666666666669" width="100" height="150.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="7d0-qh-5vm"/>
+                                    <constraint firstAttribute="height" constant="150" id="jjz-o7-LCb"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="soft_egg"/>
+                                </buttonConfiguration>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HSf-sk-NgT">
+                                <rect key="frame" x="258" y="363.66666666666669" width="100" height="150.00000000000006"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="vt6-1c-KF1"/>
+                                    <constraint firstAttribute="width" constant="100" id="xwd-EU-YMo"/>
+                                </constraints>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain">
+                                    <backgroundConfiguration key="background" image="hard_egg"/>
+                                </buttonConfiguration>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Ej6-5W-70l" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="5sJ-p1-aYx"/>
+                            <constraint firstItem="Ej6-5W-70l" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="35" id="8lR-I5-qpY"/>
+                            <constraint firstItem="WVN-gU-J3w" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="BcI-Wo-4hy"/>
+                            <constraint firstItem="cnK-pL-fuA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DIw-CM-8eV"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="HSf-sk-NgT" secondAttribute="trailing" constant="35" id="Uwd-IL-3x9"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="cnK-pL-fuA" secondAttribute="bottom" constant="115" id="j8s-eK-Vi7"/>
+                            <constraint firstItem="WVN-gU-J3w" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="tYE-2X-lS4"/>
+                            <constraint firstItem="HSf-sk-NgT" firstAttribute="centerY" secondItem="6Tk-OE-BBY" secondAttribute="centerY" id="uyZ-Dn-ayK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pregressBar" destination="cnK-pL-fuA" id="pLy-l8-xX7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="21" y="5"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="hard_egg" width="204" height="245"/>
+        <image name="medium_egg" width="204" height="245"/>
+        <image name="soft_egg" width="204" height="245"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

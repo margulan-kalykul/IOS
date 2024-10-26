@@ -44,6 +44,12 @@ class ViewController: UIViewController {
         if let currentTimer {
             currentTimer.invalidate()
         }
+        
+        // Stop beeping when we press another egg
+        if let player, player.isPlaying {
+            player.stop()
+        }
+        
         var cookTime: Int = eggTimes[sender.tag]!, curTime = cookTime
         currentTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
             self.progressBar.progress = Float(curTime) / Float(cookTime)

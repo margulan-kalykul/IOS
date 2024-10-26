@@ -26,6 +26,9 @@ class MovieCellTableViewCell: UITableViewCell {
     }
 
     func configure(with movie: Movie) {
-        
+        poster.image = movie.cover
+        title.text = movie.title
+        year.text = movie.year
+        genre.text = movie.genre
     }
 }

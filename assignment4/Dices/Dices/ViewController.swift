@@ -23,7 +23,7 @@ class ViewController: UIViewController {
     
     
     @IBAction func rollDices(_ sender: UIButton) {
-        let num1 = Int.random(in: 0..<diceImages.count)
+        let num1 = Int.random(in: 0...diceImages.count)
         let num2 = Int.random(in: 0..<diceImages.count)
                 
         diceImage1.image = UIImage(named: diceImages[num1])

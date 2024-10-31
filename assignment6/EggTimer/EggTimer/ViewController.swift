@@ -33,10 +33,9 @@ class ViewController: UIViewController {
             do {
                 player = try AVAudioPlayer(contentsOf: soundUrl)
                 player?.play()
-                print("Beeping")
             }
             catch {
-                print("Sound error")
+                print("Error")
             }
         }
     }

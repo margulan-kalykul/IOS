@@ -12,6 +12,7 @@ struct Movie {
     let title: String
     let year: String
     let genre: String
+    //let description: String
 }
 
 class ViewController: UIViewController {
@@ -28,6 +29,8 @@ class ViewController: UIViewController {
         Movie(poster: UIImage(named: "mission_impossible.jpg")!, title: "Mission Impossible", year: "1996", genre: "spy movie"),
         Movie(poster: UIImage(named: "star_wars_4.jpg")!, title: "Star Wars: The New Hope", year: "1977", genre: "space opera"),
     ]
+    
+    private var selectedMovie: Movie?
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -35,9 +38,25 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         tableView.rowHeight = 170
         tableView.dataSource = self
+        tableView.delegate = self
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        guard let destinationController = segue.destination as? DetailsViewController else {
+            return
+        }
+        destinationController.configure(with: selectedMovie)
+    }
+}
 
-
+extension ViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedMovie = movies[indexPath.row]
+        performSegue(withIdentifier: "seeDetails", sender: nil)
+        
+        // Remove selection
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
 }
 
 extension ViewController: UITableViewDataSource {

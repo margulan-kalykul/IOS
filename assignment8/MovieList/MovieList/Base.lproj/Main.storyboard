@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="32700.99.1234" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23504" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="22685"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23506"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -90,11 +90,61 @@
                     </view>
                     <connections>
                         <outlet property="tableView" destination="cS5-Jr-9mv" id="NWI-YG-ivE"/>
+                        <segue destination="mJr-Qs-4HF" kind="presentation" identifier="seeDetails" id="oid-Gv-sDC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="21" y="5"/>
+            <point key="canvasLocation" x="-36" y="-6"/>
+        </scene>
+        <!--Details View Controller-->
+        <scene sceneID="UL0-fp-Xbq">
+            <objects>
+                <viewController id="mJr-Qs-4HF" customClass="DetailsViewController" customModule="MovieList" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="mFc-uU-yVv">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="842"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZOr-BF-AF3">
+                                <rect key="frame" x="96.666666666666686" y="50" width="200" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="200" id="cyo-xv-Uj1"/>
+                                    <constraint firstAttribute="height" constant="300" id="kh5-kI-ML9"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b8c-Sk-g1U">
+                                <rect key="frame" x="161" y="370" width="71" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OnR-Il-L0b">
+                                <rect key="frame" x="175.66666666666666" y="456" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="uDP-Zr-Ncq"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="ZOr-BF-AF3" firstAttribute="top" secondItem="uDP-Zr-Ncq" secondAttribute="top" constant="50" id="3wB-Ax-uCP"/>
+                            <constraint firstItem="OnR-Il-L0b" firstAttribute="top" secondItem="b8c-Sk-g1U" secondAttribute="bottom" constant="50" id="BMT-Xu-dJa"/>
+                            <constraint firstItem="b8c-Sk-g1U" firstAttribute="top" secondItem="ZOr-BF-AF3" secondAttribute="bottom" constant="20" id="UWg-49-EES"/>
+                            <constraint firstItem="OnR-Il-L0b" firstAttribute="centerX" secondItem="mFc-uU-yVv" secondAttribute="centerX" id="ab6-bY-Ue7"/>
+                            <constraint firstItem="b8c-Sk-g1U" firstAttribute="centerX" secondItem="mFc-uU-yVv" secondAttribute="centerX" id="dW0-0X-rFg"/>
+                            <constraint firstItem="ZOr-BF-AF3" firstAttribute="centerX" secondItem="uDP-Zr-Ncq" secondAttribute="centerX" id="g2N-ZD-rrK"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="movieDescription" destination="OnR-Il-L0b" id="ete-lC-5rH"/>
+                        <outlet property="moviePoster" destination="ZOr-BF-AF3" id="JrO-0P-3kW"/>
+                        <outlet property="movieTitle" destination="b8c-Sk-g1U" id="vW7-hg-kAj"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Hso-gS-L9I" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="712" y="-6"/>
         </scene>
     </scenes>
     <resources>

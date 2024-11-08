@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6B8CEF372CDDD2BA00421D80 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6B8CEF362CDDD2BA00421D80 /* Movie.swift */; };
 		6BED574A2CD49831000647E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED57492CD49831000647E7 /* AppDelegate.swift */; };
 		6BED574C2CD49831000647E7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED574B2CD49831000647E7 /* SceneDelegate.swift */; };
 		6BED574E2CD49831000647E7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BED574D2CD49831000647E7 /* ViewController.swift */; };
@@ -18,6 +19,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6B8CEF362CDDD2BA00421D80 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		6BED57462CD49831000647E7 /* MovieList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6BED57492CD49831000647E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6BED574B2CD49831000647E7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 				6BED57522CD49833000647E7 /* Assets.xcassets */,
 				6BED57542CD49833000647E7 /* LaunchScreen.storyboard */,
 				6BED57572CD49833000647E7 /* Info.plist */,
+				6B8CEF362CDDD2BA00421D80 /* Movie.swift */,
 			);
 			path = MovieList;
 			sourceTree = "<group>";
@@ -146,6 +149,7 @@
 			files = (
 				6BED574E2CD49831000647E7 /* ViewController.swift in Sources */,
 				6BED574A2CD49831000647E7 /* AppDelegate.swift in Sources */,
+				6B8CEF372CDDD2BA00421D80 /* Movie.swift in Sources */,
 				6BED575F2CD49B69000647E7 /* MovieCell.swift in Sources */,
 				6BED574C2CD49831000647E7 /* SceneDelegate.swift in Sources */,
 				6BED57612CD4AAE9000647E7 /* DetailsViewController.swift in Sources */,

@@ -19,7 +19,7 @@ class DetailsViewController: UIViewController {
         super.viewDidLoad()
         moviePoster.image = inputModel?.poster
         movieTitle.text = inputModel?.title
-        //movieDescription.text = inputModel?.description
+        movieDescription.text = inputModel?.description
     }
     
     func configure(with model: Movie?) {

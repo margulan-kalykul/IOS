@@ -9,9 +9,11 @@ import UIKit
 
 class DetailsViewController: UIViewController {
     
+    
     @IBOutlet weak var moviePoster: UIImageView!
     @IBOutlet weak var movieTitle: UILabel!
     @IBOutlet weak var movieDescription: UILabel!
+    
     
     private var inputModel: Movie?
     

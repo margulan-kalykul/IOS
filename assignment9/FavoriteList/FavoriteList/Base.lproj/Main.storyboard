@@ -107,12 +107,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CEW-4w-TrJ">
-                                <rect key="frame" x="0.0" y="51" width="393" height="749"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="CEW-4w-TrJ">
+                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="170" id="9Wc-Pq-ddv" customClass="MovieCell" customModule="FavoriteList" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="MovieCell" rowHeight="170" id="9Wc-Pq-ddv" customClass="BookCell" customModule="FavoriteList" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="170"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="9Wc-Pq-ddv" id="C8D-gZ-AQ4">
@@ -162,10 +161,10 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <outlet property="genre" destination="19Y-hc-0b6" id="Rok-vg-wJo"/>
-                                            <outlet property="poster" destination="pVL-o6-nd2" id="WXs-HI-B9P"/>
-                                            <outlet property="title" destination="6Sh-Kz-wKR" id="hQb-mE-hKa"/>
-                                            <outlet property="year" destination="jmD-wy-u7R" id="8We-DH-wiD"/>
+                                            <outlet property="genre" destination="19Y-hc-0b6" id="JtB-h9-v7m"/>
+                                            <outlet property="poster" destination="pVL-o6-nd2" id="Sbp-xs-E55"/>
+                                            <outlet property="title" destination="6Sh-Kz-wKR" id="Zf0-d3-naz"/>
+                                            <outlet property="year" destination="jmD-wy-u7R" id="a9W-UU-wZ1"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -173,6 +172,12 @@
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="SBg-Iz-wkX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CEW-4w-TrJ" firstAttribute="top" secondItem="tLp-Jy-eAf" secondAttribute="top" id="BRf-Zg-LGt"/>
+                            <constraint firstItem="CEW-4w-TrJ" firstAttribute="trailing" secondItem="SBg-Iz-wkX" secondAttribute="trailing" id="JuW-rd-j2T"/>
+                            <constraint firstAttribute="bottom" secondItem="CEW-4w-TrJ" secondAttribute="bottom" id="Uao-ut-PGf"/>
+                            <constraint firstItem="CEW-4w-TrJ" firstAttribute="leading" secondItem="SBg-Iz-wkX" secondAttribute="leading" id="bOf-bT-Efa"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="a5F-NX-G2s"/>
                 </viewController>
@@ -197,7 +202,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eKi-MO-dSW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-536" y="-349"/>
+            <point key="canvasLocation" x="-628" y="-23"/>
         </scene>
         <!--Details View Controller-->
         <scene sceneID="pU3-uy-sWk">
@@ -266,7 +271,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nlJ-ht-bHM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="369" y="577"/>
+            <point key="canvasLocation" x="369" y="724"/>
         </scene>
         <!--Movies-->
         <scene sceneID="c8C-JG-veJ">

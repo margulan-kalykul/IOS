@@ -9,8 +9,8 @@ import UIKit
 
 class BooksController: UIViewController {
 
-    private var selectedBook: Movie?
-
+    private var selectedBook: Book?
+    
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
@@ -21,7 +21,7 @@ class BooksController: UIViewController {
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        guard let destinationController = segue.destination as? DetailsViewController else {
+        guard let destinationController = segue.destination as? BookDetails else {
             return
         }
         destinationController.configure(with: selectedBook)
@@ -30,8 +30,8 @@ class BooksController: UIViewController {
 
 extension BooksController: UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        selectedBook = movies[indexPath.row]
-        performSegue(withIdentifier: "seeDetails", sender: nil)
+        selectedBook = books[indexPath.row]
+        performSegue(withIdentifier: "seeDetailsBooks", sender: nil)
         
         // Remove selection
         tableView.deselectRow(at: indexPath, animated: true)

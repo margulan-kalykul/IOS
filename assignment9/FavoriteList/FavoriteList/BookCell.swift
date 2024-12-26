@@ -13,6 +13,7 @@ class BookCell: UITableViewCell {
     @IBOutlet weak var title: UILabel!
     @IBOutlet weak var year: UILabel!
     @IBOutlet weak var genre: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,11 +25,11 @@ class BookCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func configure(with movie: Movie) {
-        poster.image = movie.poster
-        title.text = movie.title
-        year.text = movie.year
-        genre.text = movie.genre
+    func configure(with book: Book) {
+        poster.image = book.poster
+        title.text = book.title
+        year.text = book.year
+        genre.text = book.genre
     }
 
 }

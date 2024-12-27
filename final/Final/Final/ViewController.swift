@@ -56,6 +56,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     @IBAction func nextPage(_ sender: UIButton) {
         if response != nil && response!.next != nil {
+            print(response!.next!)
             pageNumber.text = String(Int(pageNumber.text!)! + 1)
             Task {
                 await self.fetchBooks(with: response!.next!)
@@ -64,6 +65,7 @@ class ViewController: UIViewController, UISearchBarDelegate {
     }
     @IBAction func previousPage(_ sender: UIButton) {
         if response != nil && response!.previous != nil {
+            print(response!.previous!)
             pageNumber.text = String(Int(pageNumber.text!)! - 1)
             Task {
                 await self.fetchBooks(with: response!.previous!)
@@ -94,8 +96,23 @@ class ViewController: UIViewController, UISearchBarDelegate {
             print(error)
         }
         // Populate the cells with aquired data
+        books = []
         for book in self.response!.results {
-            books.append(Book(id: book.id, cover: "https://gutenberg.org/cache/epub/\(book.id)/pg\(book.id).cover.medium.jpg", title: book.title, author: book.authors[0].name, subject: book.subjects[0], text: nil))
+            var author = ""
+            var subject = ""
+            if book.subjects.count == 0 {
+                subject = "None"
+            }
+            else {
+                subject = book.subjects[0]
+            }
+            if book.authors.count == 0 {
+                author = "None"
+            }
+            else {
+                author = book.authors[0].name
+            }
+            books.append(Book(id: book.id, cover: "https://gutenberg.org/cache/epub/\(book.id)/pg\(book.id).cover.medium.jpg", title: book.title, author: author, subject: subject, text: nil))
         }
         await MainActor.run {
             self.tableView.reloadData()

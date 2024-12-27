@@ -32,10 +32,25 @@ class BookCell: UITableViewCell {
     
     @IBAction func switchAction(_ sender: UISwitch) {
         if favouriteSwitch.isOn {
-            defaults.set(true, forKey: String(bookId!))
+            if defaults.object(forKey: "favourites") == nil {
+                let arr: [Int] = []
+                defaults.set(arr, forKey: "favourites")
+            }
+            var arr = defaults.array(forKey: "favourites")
+            arr!.append(bookId!)
+            defaults.set(arr, forKey: "favourites")
         }
         else {
-            defaults.removeObject(forKey: String(bookId!))
+            var arr = defaults.array(forKey: "favourites")
+            var toRemove: Int = 1
+            for i in arr!.indices {
+                if arr![i] as! Int == bookId! {
+                    toRemove = i
+                }
+            }
+            arr!.remove(at: toRemove)
+            defaults.removeObject(forKey: "favourites")
+            defaults.set(arr, forKey: "favourites")
         }
     }
     

@@ -71,7 +71,7 @@
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Rmv-n6-hf5">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Rmv-n6-hf5">
                                                     <rect key="frame" x="314" y="69.666666666666671" width="51" height="31"/>
                                                     <connections>
                                                         <action selector="switchAction:" destination="Khv-on-gFD" eventType="touchDown" id="WT3-i0-Yus"/>
@@ -154,10 +154,10 @@
             </objects>
             <point key="canvasLocation" x="1900" y="3.5211267605633805"/>
         </scene>
-        <!--View Controller-->
+        <!--Favourite Controller-->
         <scene sceneID="hEQ-9W-lFA">
             <objects>
-                <viewController id="MaU-yN-lj7" sceneMemberID="viewController">
+                <viewController id="MaU-yN-lj7" customClass="FavouriteController" customModule="Final" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="JvE-cg-w7Q">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -239,6 +239,9 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="lBr-ae-NE7"/>
+                    <connections>
+                        <outlet property="tableView" destination="1pa-I5-g66" id="kkV-dY-ODc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6lM-Xq-2Rf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
